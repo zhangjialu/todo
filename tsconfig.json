@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "NodeNext",
+    // "moduleResolution": "NodeNext",
+
+    "useDefineForClassFields": true,
+    "esModuleInterop": true,
+    "noEmitOnError": true,
+    // "sourceMap": true,
+
+    "strict": true
+  }
+}

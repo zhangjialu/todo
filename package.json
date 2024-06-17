@@ -1,0 +1,34 @@
+{
+  "name": "@luoo/todo",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "bin": {
+    "todo": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "pnpm clean && tsc",
+    "build:watch": "tsc --watch",
+    "start": "pnpm clean && pnpm build && node ./dist/index.js",
+    "dev": "concurrently -r \"pnpm build:watch\" \"pnpm test:watch\"",
+    "test": "node --test",
+    "test:watch": "node --test --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.0.5",
+    "lowdb": "^7.0.1",
+    "nanoid": "^5.0.7"
+  }
+}
